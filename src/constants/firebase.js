@@ -5,17 +5,17 @@
  * https://github.com/mcnamee/react-native-starter-app
  */
 import * as Firebase from 'firebase';
-import {
+/* import {
   API_KEY,
   AUTH_DOMAIN,
   DATABASE_URL,
   STORAGE_BUCKET,
-  MESSAGING_SENDER_ID,
-} from 'react-native-dotenv';
+  MESSAGING_SENDER_ID
+} from 'react-native-dotenv'; */
 
-let firebaseInitialized = false;
+const firebaseInitialized = false;
 
-if (
+/* if (
   API_KEY !== 'null' &&
   AUTH_DOMAIN !== 'null' &&
   DATABASE_URL !== 'null' &&
@@ -31,7 +31,9 @@ if (
   });
 
   firebaseInitialized = true;
-}
+} */
 
-export const FirebaseRef = firebaseInitialized ? Firebase.database().ref() : null;
-export default firebaseInitialized ? Firebase : null;
+export const FirebaseRef = firebaseInitialized
+  ? Firebase.database().ref()
+  : null;
+export default (firebaseInitialized ? Firebase : null);
