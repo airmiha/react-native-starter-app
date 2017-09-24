@@ -12,6 +12,7 @@ import {
   Image,
   Text,
   View,
+  ScrollView,
   StyleSheet,
   InteractionManager,
   TouchableOpacity
@@ -27,6 +28,7 @@ const { screen: { widthHalf } } = AppSizes;
 
 const styles = StyleSheet.create({
   buttonPlay: {
+    marginTop: 20,
     paddingHorizontal: 50
   },
   container: {
@@ -236,10 +238,10 @@ class Courses extends Component {
   };
 
   render = () => (
-    <View style={styles.tabContainer}>
+    <ScrollView style={styles.tabContainer}>
       {this.renderFeatured()}
       {this.renderRecent()}
-    </View>
+    </ScrollView>
   );
 }
 

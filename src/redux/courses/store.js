@@ -70,7 +70,7 @@ export default {
       author: 'Tim Ferriss',
       image:
         'https://cdn.pixabay.com/photo/2014/10/02/15/51/the-sun-470317_960_720.jpg',
-      sessions: [],
+      sessions: [{}],
       duration: 4
     },
     {
