@@ -7,22 +7,11 @@
  */
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  Image,
-  Text,
-  View,
-  StyleSheet,
-  InteractionManager,
-  TouchableOpacity
-} from 'react-native';
+import { View, StyleSheet, InteractionManager } from 'react-native';
 import { TabViewAnimated } from 'react-native-tab-view';
-import { Card, Icon, ListItem, Button, Tile } from 'react-native-elements';
 
 // Consts and Libs
 import { AppColors } from '@theme/';
-
-// Containers
-import RecipeListing from '@containers/recipes/Listing/ListingContainer';
 
 // Components
 import Loading from '@components/general/Loading';
@@ -122,47 +111,6 @@ class RecipeTabs extends Component {
       navigation: { ...this.state.navigation, index }
     });
   };
-
-  onPressFavourite = () => {};
-
-  onPressSeries = () => {};
-
-  renderCard() {
-    const { recipes } = this.props;
-
-    const featured = recipes[0];
-
-    const { days, duration, image, title, isFavourite } = featured;
-    const caption = `${days} days - ${duration}m`;
-
-    return (
-      <Image source={image && { uri: image }} style={{ height: 320 }}>
-        <Text>{title}</Text>
-        <Text>{caption}</Text>
-        <Button
-          icon={{ name: 'play-arrow' }}
-          onPress={this.onPressSeries}
-          title="Day 2"
-        />
-        {
-          <TouchableOpacity
-            activeOpacity={0.8}
-            onPress={this.onPressFavourite}
-            style={[styles.favourite]}
-          >
-            <Icon
-              raised
-              name={'star-border'}
-              color={isFavourite ? '#FFFFFF' : '#FDC12D'}
-              containerStyle={{
-                backgroundColor: isFavourite ? '#FDC12D' : '#FFFFFF'
-              }}
-            />
-          </TouchableOpacity>
-        }
-      </Image>
-    );
-  }
 
   /**
     * Which component to show

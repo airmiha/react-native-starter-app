@@ -12,7 +12,7 @@ exports[`List renders correctly 1`] = `
       },
       Array [
         Object {
-          "backgroundColor": "#E9EBEE",
+          "backgroundColor": "#2b323d",
           "borderBottomWidth": 0,
           "borderTopColor": "#D0D1D5",
           "margin": 0,

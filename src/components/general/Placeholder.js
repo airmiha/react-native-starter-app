@@ -19,7 +19,7 @@ import { Text } from '@ui/';
 /* Component ==================================================================== */
 const Placeholder = ({ text }) => (
   <View style={[AppStyles.container, AppStyles.containerCentered]}>
-    <Text>{text}</Text>
+    <Text style={{ color: 'white' }}>{text}</Text>
   </View>
 );
 

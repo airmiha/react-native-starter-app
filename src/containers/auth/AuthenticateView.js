@@ -36,10 +36,6 @@ const styles = StyleSheet.create({
 class Authenticate extends Component {
   static componentName = 'Authenticate';
 
-  componentWillMount() {
-    Actions.app();
-  }
-
   render = () => (
     <View
       style={[

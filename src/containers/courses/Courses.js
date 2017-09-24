@@ -17,12 +17,12 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-import { Icon, Button, Tile } from 'react-native-elements';
+import { Icon, Button } from 'react-native-elements';
 
 // Consts and Libs
-import { AppColors, AppStyles, AppSizes } from '@theme/';
+import { AppStyles, AppSizes } from '@theme/';
 
-const { h1, h5, row, voffset2 } = AppStyles;
+const { h1, h5, voffset2 } = AppStyles;
 const { screen: { widthHalf } } = AppSizes;
 
 const styles = StyleSheet.create({
@@ -85,11 +85,11 @@ const styles = StyleSheet.create({
   }
 });
 
-const { arrayOf, object, shape, string } = PropTypes;
+const { arrayOf, object } = PropTypes;
 
 class Courses extends Component {
   static propTypes = {
-    meals: arrayOf(object).isRequired
+    courses: arrayOf(object).isRequired
   };
 
   constructor(props) {
@@ -126,7 +126,7 @@ class Courses extends Component {
     );
   };
 
-  renderCard() {
+  renderFeatured() {
     const { courses } = this.props;
     const { buttonPlay, overlayText } = styles;
 
@@ -202,12 +202,12 @@ class Courses extends Component {
     );
   };
 
-  renderSectionHeader = (title, type) => {
+  renderSectionHeader = title => {
     const { overlayText, sectionHeader, seeAll, seeAllText } = styles;
 
     return (
       <View style={sectionHeader}>
-        <Text style={[h5, overlayText]}>Title</Text>
+        <Text style={[h5, overlayText]}>{title}</Text>
         <TouchableOpacity activeOpacity={0.8} onPress={this.onSeeAll}>
           <View style={[seeAll]}>
             <Text style={[seeAllText]}>See all</Text>
@@ -218,12 +218,12 @@ class Courses extends Component {
     );
   };
 
-  renderSection = (items, title, type) => {
-    const { section, sectionHeader } = styles;
+  renderSection = (items, title) => {
+    const { section } = styles;
 
     return (
       <View style={section}>
-        {this.renderSectionHeader()}
+        {this.renderSectionHeader(title)}
         {this.renderList(items)}
       </View>
     );
@@ -232,19 +232,19 @@ class Courses extends Component {
   renderRecent = () => {
     const { courses } = this.props;
 
-    return renderSection();
+    return this.renderSection(courses, 'Recent');
   };
 
   render = () => (
     <View style={styles.tabContainer}>
-      {this.renderCard()}
+      {this.renderFeatured()}
       {this.renderRecent()}
     </View>
   );
 }
 
 // What data from the store shall we send to the component?
-const mapStateToProps = ({ courses = [] }) => ({
+const mapStateToProps = ({ course: { courses = [] } }) => ({
   courses
 });
 

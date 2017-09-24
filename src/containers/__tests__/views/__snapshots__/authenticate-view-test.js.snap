@@ -9,7 +9,7 @@ exports[`AuthenticateView renders correctly 1`] = `
         "justifyContent": "center",
       },
       Object {
-        "backgroundColor": "#E9EBEE",
+        "backgroundColor": "#2b323d",
         "flex": 1,
         "flexDirection": "column",
         "position": "relative",

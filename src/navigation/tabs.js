@@ -17,11 +17,8 @@ import { NavbarMenuButton } from '@containers/ui/NavbarMenuButton/NavbarMenuButt
 
 // Scenes
 import Placeholder from '@components/general/Placeholder';
-import Error from '@components/general/Error';
 import StyleGuide from '@containers/StyleGuideView';
 import Courses from '@containers/courses/Courses';
-import Recipes from '@containers/recipes/Browse/BrowseContainer';
-import RecipeView from '@containers/recipes/RecipeView';
 
 const navbarPropsTabs = {
   ...AppConfig.navbarProps,
@@ -71,8 +68,8 @@ const scenes = (
     <Scene
       key={'error'}
       {...navbarPropsTabs}
-      title={'Example Error'}
-      component={Error}
+      title={'Me'}
+      component={Placeholder}
       icon={props =>
         TabIcon({ ...props, icon: 'ios-person', type: 'ionicon', title: 'Me' })}
       analyticsDesc={'Error: Example Error'}

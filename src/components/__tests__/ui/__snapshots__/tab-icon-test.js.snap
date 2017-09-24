@@ -2,47 +2,70 @@
 
 exports[`TabIcon renders correctly 1`] = `
 <View
-  onPress={undefined}
   style={
-    Array [
-      false,
-      false,
-      false,
-      Object {
-        "alignItems": "center",
-        "backgroundColor": "transparent",
-        "justifyContent": "center",
-      },
-      undefined,
-    ]
+    Object {
+      "alignItems": "center",
+      "alignSelf": "center",
+      "flex": 1,
+      "flexDirection": "column",
+      "justifyContent": "center",
+    }
   }
-  underlayColor="white"
 >
-  <Text
-    accessible={true}
-    allowFontScaling={false}
-    ellipsizeMode="tail"
+  <View
+    onPress={undefined}
     style={
       Array [
+        false,
+        false,
+        false,
         Object {
-          "color": "#0E4EF8",
-          "fontSize": 26,
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "justifyContent": "center",
         },
-        Array [
-          Object {
-            "backgroundColor": "transparent",
-          },
-          undefined,
-        ],
-        Object {
-          "fontFamily": "Material Icons",
-          "fontStyle": "normal",
-          "fontWeight": "normal",
-        },
+        undefined,
       ]
     }
+    underlayColor="white"
   >
-    
-  </Text>
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
+      style={
+        Array [
+          Object {
+            "color": "yellow",
+            "fontSize": 26,
+          },
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+          ],
+          Object {
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+        ]
+      }
+    >
+      
+    </Text>
+  </View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#BABDC2",
+        "fontSize": 12,
+      }
+    }
+  />
 </View>
 `;

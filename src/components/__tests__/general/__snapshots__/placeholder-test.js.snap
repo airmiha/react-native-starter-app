@@ -5,7 +5,7 @@ exports[`Placeholder renders correctly 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#E9EBEE",
+        "backgroundColor": "#2b323d",
         "flex": 1,
         "flexDirection": "column",
         "position": "relative",
@@ -50,7 +50,7 @@ exports[`Placeholder w/ Text renders correctly 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "#E9EBEE",
+        "backgroundColor": "#2b323d",
         "flex": 1,
         "flexDirection": "column",
         "position": "relative",
