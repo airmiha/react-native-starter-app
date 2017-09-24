@@ -14,14 +14,13 @@ import * as RecipeActions from '@redux/recipes/actions';
 import AppLaunchRender from './LaunchView';
 
 // What data from the store shall we send to the component?
-const mapStateToProps = () => ({
-});
+const mapStateToProps = () => ({});
 
 // Any actions to map to the component?
 const mapDispatchToProps = {
   login: UserActions.login,
   getRecipes: RecipeActions.getRecipes,
-  getMeals: RecipeActions.getMeals,
+  getMeals: RecipeActions.getMeals
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(AppLaunchRender);

@@ -10,12 +10,12 @@ import { connect } from 'react-redux';
 import RecipeTabsRender from './BrowseView';
 
 // What data from the store shall we send to the component?
-const mapStateToProps = state => ({
-  meals: state.recipe.meals || [],
+const mapStateToProps = ({ recipe: { recipes = [], meals = [] } }) => ({
+  meals,
+  recipes
 });
 
 // Any actions to map to the component?
-const mapDispatchToProps = {
-};
+const mapDispatchToProps = {};
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipeTabsRender);

@@ -6,35 +6,35 @@
  */
 
 const app = {
-  background: '#E9EBEE',
+  background: '#2b323d',
   cardBackground: '#FFFFFF',
-  listItemBackground: '#FFFFFF',
+  listItemBackground: '#FFFFFF'
 };
 
 const brand = {
   brand: {
     primary: '#0E4EF8',
-    secondary: '#17233D',
-  },
+    secondary: '#17233D'
+  }
 };
 
 const text = {
   textPrimary: '#222222',
   textSecondary: '#777777',
   headingPrimary: brand.brand.primary,
-  headingSecondary: brand.brand.primary,
+  headingSecondary: brand.brand.primary
 };
 
 const borders = {
-  border: '#D0D1D5',
+  border: '#D0D1D5'
 };
 
 const tabbar = {
   tabbar: {
-    background: '#ffffff',
+    background: '#3a3837' || '#ffffff',
     iconDefault: '#BABDC2',
-    iconSelected: brand.brand.primary,
-  },
+    iconSelected: 'yellow' || brand.brand.primary
+  }
 };
 
 export default {
@@ -42,5 +42,5 @@ export default {
   ...brand,
   ...text,
   ...borders,
-  ...tabbar,
+  ...tabbar
 };

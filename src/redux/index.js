@@ -13,6 +13,7 @@ import router from '@redux/router/reducer';
 import sideMenu from '@redux/sidemenu/reducer';
 import user from '@redux/user/reducer';
 import recipe from '@redux/recipes/reducer';
+import courses from '@redux/courses/reducer';
 
 // Combine all
 const appReducer = combineReducers({
@@ -20,11 +21,12 @@ const appReducer = combineReducers({
   sideMenu,
   user,
   recipe,
+  courses
 });
 
 // Setup root reducer
 const rootReducer = (state, action) => {
-  const newState = (action.type === 'RESET') ? undefined : state;
+  const newState = action.type === 'RESET' ? undefined : state;
   return appReducer(newState, action);
 };
 

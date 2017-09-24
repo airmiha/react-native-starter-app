@@ -5,6 +5,7 @@
     "classes": true
   },
   "rules": {
+    "arrow-parens": 0,
     "comma-dangle": 0,
     "react/jsx-filename-extension": [
       "error",
